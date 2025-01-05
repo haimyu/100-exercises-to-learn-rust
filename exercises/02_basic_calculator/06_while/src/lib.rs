@@ -1,16 +1,12 @@
 // Rewrite the factorial function using a `while` loop.
 pub fn factorial(n: u32) -> u32 {
-    let mut result: u32 = 0;
-    while ..=n {
-        result = n * (n - 1);
-        let _ = n - 1;
-    };
-    if result != 0 {
-        result
+    let mut result = 1;
+    let mut i = 1;
+    while i <= n{
+        result *= i;
+        i += 1;
     }
-    else {
-        1
-    }
+    result
 }
 
 #[cfg(test)]
